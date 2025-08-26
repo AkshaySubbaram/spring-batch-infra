@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: spring-batch-app
-          image: docker.io/<your-dockerhub-username>/spring-batch-excel:latest
+          image: docker.io/akshaysubbaram/spring-batch-excel:latest
           ports:
             - containerPort: 8080
