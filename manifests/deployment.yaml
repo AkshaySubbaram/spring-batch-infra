@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-batch-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-batch-app
+  template:
+    metadata:
+      labels:
+        app: spring-batch-app
+    spec:
+      containers:
+        - name: spring-batch-app
+          image: docker.io/<your-dockerhub-username>/spring-batch-excel:latest
+          ports:
+            - containerPort: 8080
